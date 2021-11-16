@@ -100,24 +100,30 @@ get '/bet' do
 end
 
 post '/bet' do
-  @account=User_data.get(session[:Username])
-  stake = params[:stake].to_i
-  number = params[:number].to_i
-  roll = rand(6) + 1
-  if number == roll
-    session[:session_win] += 1
-    session[:win_sum] += 1
-    session[:session_profit] += stake
-    session[:profit_sum] += stake
-    session[:message]="You are win!"
+  session[:message]=" "
+  if params[:stake] !~ /\d/ or params[:number] !~ /[1-6]/
+    session[:message]="Input is not VALID!!"
     erb :bet
   else
-    session[:session_loss] += 1
-    session[:loss_sum] += 1
-    session[:session_profit] -= stake
-    session[:profit_sum] -= stake
-    session[:message]="You are lose… The dice number is #{roll}"
-    erb :bet
+    @account=User_data.get(session[:Username])
+    stake = params[:stake].to_i
+    number = params[:number].to_i
+    roll = rand(6) + 1
+    if number == roll
+      session[:session_win] += 1
+      session[:win_sum] += 1
+      session[:session_profit] += stake
+      session[:profit_sum] += stake
+      session[:message]="You are win!"
+      erb :bet
+    else
+      session[:session_loss] += 1
+      session[:loss_sum] += 1
+      session[:session_profit] -= stake
+      session[:profit_sum] -= stake
+      session[:message]="You are lose… The dice number is #{roll}"
+      erb :bet
+    end
   end
 end
 
