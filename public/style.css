@@ -1,0 +1,188 @@
+body {
+    /*padding-top: 30px;*/
+}
+
+input {
+    border: 1px solid cornflowerblue;
+
+}
+
+.container {
+    width:500px;
+    border: 1px solid cornflowerblue;
+    /*padding:25px;*/
+    position:relative;
+    margin: auto;
+
+}
+
+.header {
+    width: 450px;
+    height: 60px;
+    /*padding: 25px 0px 25px 50px;*/
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    background-color: #c1c0c0;
+    /*color: gray;*/
+}
+
+h1 {
+    color: #3f4951;
+    /*margin-left: 50px;*/
+    /*margin-top: 25px;*/
+    /*text-align:center;*/
+}
+
+.subContainer {
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+    /*padding-left: 20px;*/
+}
+
+.content {
+    /*margin-left: 35px;*/
+    /*margin-top: 35px;*/
+    margin: 35px;
+}
+
+ul p{
+    font-family: Arial Verdana;
+    color: blue;
+    font-weight: bold;
+}
+
+
+/*login page*/
+
+.log_button{
+    color: hotpink;
+}
+
+.signup_button {
+    color: limegreen;
+}
+
+.table1 p{
+    font-family: "Monospace";
+    font-size: 20px;
+    margin-right: 40px;
+    color: #2f2b30;
+}
+
+
+/*为什么这个上边距是失效的*/
+.table1 tr{
+    margin-top: 10px;
+}
+
+.login_input {
+    background: #d6cbd8;
+    border: none;
+    width: 200px;
+    height: 30px;
+
+}
+
+.Username {
+    background: white;
+    border: 1px solid cornflowerblue;
+    width: 200px;
+    height: 30px;
+}
+
+.Password {
+    background: white;
+    border: 1px solid cornflowerblue;
+    width: 200px;
+    height: 30px;
+}
+
+.login_btn {
+    margin-top: 10px;
+    float: right;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid cornflowerblue;
+
+}
+
+.blockUp {
+    display: flex;
+}
+
+.blockLeft {
+    /*background-color: #2f2b30;*/
+    width: 70%;
+    /*float: left;*/
+    /*display: inline-block;*/
+    margin-right: 10px;
+
+}
+
+.blockContent {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#bet_submit p{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#bet_btn {
+    float: right;
+    border: 1px solid cornflowerblue;
+    width: 50px;
+    height: 20px;
+    background-color: white;
+
+}
+
+.blockRight {
+    width: 30%;
+    /*float: left;*/
+    /*background-color: green;*/
+    border: 1px solid cornflowerblue;
+
+    /*display: inline-block;*/
+}
+
+.blockRight input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.blockBottom {
+    width: 100%;
+    /*background-color: hotpink;*/
+    border: 1px solid cornflowerblue;
+
+    /*float: left;*/
+}
+
+.result_account {
+    width: 20%;
+}
+
+.result_session {
+    width: 50%;
+}
+
+.blockBottom span {
+    margin-right: 40px;
+}
+
+.blockBottom input {
+    margin-right: 35px;
+}
+
+#logout_btn {
+    border: 1px solid cornflowerblue;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    margin-top: 20px;
+}

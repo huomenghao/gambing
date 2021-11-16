@@ -1,0 +1,70 @@
+
+<div class="blockUp">
+  <div class="blockLeft">
+    <div class="blockContent">
+      <p>place your bet on dice number (1-6)</p>
+      <p><%=session[:message]%>&nbsp</p>
+      <form action="/bet" method='post'>
+        <table id="bet_submit">
+          <tr>
+            <td>
+              <p>bet money</p>
+            </td>
+            <td>
+              <input type="text" name="stake"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>on</p>
+            </td>
+            <td>
+              <input type="text" name="number"/>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button id="bet_btn">bet</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  <div class="blockRight">
+    <div class="blockContent">
+      <p>Session Score:</p>
+      <label for="">Total Win:</label><br>
+      <input type="text" class="result_session" value="<%=session[:session_win]%>" readonly><br>
+      <label for="">Total Loss:</label><br>
+      <input type="text" class="result_session" value="<%=session[:session_loss]%>" readonly><br>
+      <label for="">Total Profit:</label><br>
+      <input type="text" class="result_session" value="<%=session[:session_profit]%>" readonly><br>
+    </div>
+  </div>
+
+</div>
+
+<p>Account:</p>
+<div class="blockBottom">
+
+  <div class="blockContent">
+<!--    <p>Account Score:</p>-->
+    <span>Total Win:</span>
+    <span>Total Loss:</span>
+    <span> Total Profit:</span><br>
+    <input type="text" class="result_account" value="<%=session[:win_sum]%>" readonly>
+    <input type="text" class="result_account" value="<%=session[:loss_sum]%>" readonly>
+    <input type="text" class="result_account" value="<%=session[:profit_sum]%>" readonly></div>
+
+
+</div>
+
+<form action="/logout" method="post">
+  <input type="submit" id="logout_btn" value="Logout">
+</form>
+
+
+
